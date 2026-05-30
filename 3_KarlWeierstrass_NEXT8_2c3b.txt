@@ -1,0 +1,90 @@
+3_KarlWeierstrass_NEXT8_2c3b — Fraktalna dimenzija + ACF (POGODNO)
+============================================================
+
+KORAK 1: Weierstrass-ova funkcija nad svih izvucenih kombinacija
+
+  CSV izvucenih:        /Users/4c/Desktop/GHQ/data/loto7_4624_k43.csv
+  Ucitano izvlacenja:    4624
+  C(39,7):              15,380,937
+  f(t) = lex-indeks izvucene kombinacije u skupu svih 39C7
+
+
+============================================================
+KORAK 2c3b: Aparat 2c Fraktalna dimenzija + Test 3b Autokorelacija (ACF)
+============================================================
+
+  PNG:                  /Users/4c/Desktop/GHQ/KarlWeierstrass/3_KarlWeierstrass_NEXT8_2c3b.png
+
+ACF nad rolling/local FD nizom:
+  broj rolling FD tacaka = 31
+  max lag               = 20
+  95% band              = +/-0.352026
+  max |ACF|             = 0.525746
+  znacajnih lagova      = 2/20
+  Ljung-Box h           = 10
+  Ljung-Box Q           = 30.445997
+  Ljung-Box p           = 0.000724
+
+Shuffled rolling FD max |ACF| referenca:
+  runs                  = 500
+  mean                  = 0.311894
+  std                   = 0.074047
+  z                     = 2.888028
+  p(shuffled >= obs)    = 0.014000
+  interpret.            = rolling FD ima ACF signal iznad shuffled reference
+
+Top ACF lagovi rolling FD po apsolutnoj vrednosti:
+  lag                  ACF
+  6            -0.52574555
+  5            -0.35629428
+  1             0.33475809
+  4            -0.30766762
+  2             0.26434933
+  9             0.20826049
+  13           -0.17087718
+  18            0.15940696
+  10            0.15695995
+  15           -0.12899627
+
+Vreme KORAKA 2c3b: 0:00:06 (6.7 s)
+Ukupno vreme:       0:00:06 (6.8 s)
+
+============================================================
+PREDIKCIJA 8: NEXT8 / 2c3b / rolling FD ACF
+============================================================
+
+Model:
+  Rolling FD ima ACF signal iznad shuffled reference.
+  Sledeci FD se procenjuje AR(1): FD_next = mean(FD) + rho_FD*(FD_last-mean(FD)).
+  FD se koristi kao rezim amplitude: visi FD -> veci skok, nizi FD -> manji skok.
+
+Parametri:
+  rho_FD lag-1           = 0.33475809
+  FD mean                = 1.99750412
+  FD std                 = 0.00279157
+  zadnji FD              = 1.99932467
+  pred. FD               = 1.99811357
+  FD z                   = 0.21831623
+  amplitude scale        = 1.05457906
+  local window           = 768
+  lokalni slope          = -739.26066925
+  lokalni resid std      = 4,500,683.77058056
+  recent mean dX         = -6,859.22555411
+  recent std dX          = 6,269,244.17079193
+  zadnji dX              = -2,143,496.00000000
+  zadnji lex             = 513,114
+  pred. inkrement        = -1,133,859.79281104
+
+Glavna prognoza:
+  pred. lex float        = -620,745.79281104
+  pred. lex              = 1
+  pred. kombinacija      = (1, 2, 3, 4, 5, 6, 7)
+
+Kandidati oko FD-amplitude prognoze:
+         z           lex  kombinacija
+     -1.28             1  (1, 2, 3, 4, 5, 6, 7)
+      0.43     2,222,162  (1, 10, 14, 16, 18, 20, 26)
+      0.84     4,932,842  (2, 15, 19, 22, 29, 32, 37)
+      1.28     7,841,864  (4, 8, 13, 15, 16, 25, 35)
+
+Vreme PREDIKCIJE 8: 0:00:00 (0.0 s)
