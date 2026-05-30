@@ -3,8 +3,8 @@
 
 KORAK 1: Weierstrass-ova funkcija nad svih izvucenih kombinacija
 
-  CSV izvucenih:        /Users/4c/Desktop/GHQ/data/loto7_4624_k43.csv
-  Ucitano izvlacenja:    4624
+  CSV izvucenih:        /data/loto7_4624_k43.csv
+  Ucitano izvlacenja:   4624
   C(39,7):              15,380,937
   f(t) = lex-indeks izvucene kombinacije u skupu svih 39C7
 
@@ -13,7 +13,7 @@ KORAK 1: Weierstrass-ova funkcija nad svih izvucenih kombinacija
 KORAK 2c3b: Aparat 2c Fraktalna dimenzija + Test 3b Autokorelacija (ACF)
 ============================================================
 
-  PNG:                  /Users/4c/Desktop/GHQ/KarlWeierstrass/3_KarlWeierstrass_NEXT8_2c3b.png
+  PNG:                  /3_KarlWeierstrass_NEXT8_2c3b.png
 
 ACF nad rolling/local FD nizom:
   broj rolling FD tacaka = 31
@@ -83,8 +83,8 @@ Glavna prognoza:
 Kandidati oko FD-amplitude prognoze:
          z           lex  kombinacija
      -1.28             1  (1, 2, 3, 4, 5, 6, 7)
-      0.43     2,222,162  (1, 10, 14, 16, 18, 20, 26)
-      0.84     4,932,842  (2, 15, 19, 22, 29, 32, 37)
-      1.28     7,841,864  (4, 8, 13, 15, 16, 25, 35)
+      0.43     2,222,162  (1, x, 14, y, 18, z, 26)
+      0.84     4,932,842  (2, x, 19, y, 29, z, 37)
+      1.28     7,841,864  (4, x, 13, y, 16, z, 35)
 
 Vreme PREDIKCIJE 8: 0:00:00 (0.0 s)
